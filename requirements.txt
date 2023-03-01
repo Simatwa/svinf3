@@ -1,0 +1,4 @@
+colorama
+cloudscraper
+tabulate
+requests
