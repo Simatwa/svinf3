@@ -30,7 +30,7 @@ $ sudo bash install.sh
 
 ### Usage
 
-`svinf3 {url}`
+`$ svinf3 {url}`
 
 - For futher info run `svinf3 -h`.
 
