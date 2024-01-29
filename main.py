@@ -263,9 +263,12 @@ class handler:
             # if not args.table:
             # self.header_info(resp)
             if args.prettify:
-                from bs4 import BeautifulSoup as bts
-
-                dta = bts(resp.text, "html.parser").prettify()
+                try:
+                    import json
+                    dta = json.dumps(resp.json(),indent=5)
+                except:
+                    from bs4 import BeautifulSoup as bts
+                    dta = bts(resp.text, "html.parser").prettify()
             else:
                 dta = resp.content if args.binary else resp.text
             if args.all:
